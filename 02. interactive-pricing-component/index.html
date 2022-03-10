@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive Pricing Component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="header">
+          <div class="header-bg">
+            <img src="images/pattern-circles.svg" alt="" />
+          </div>
+          <div class="header-wrapper">
+            <div class="header-title">
+              <h1>Simple, traffic-based pricing</h1>
+            </div>
+            <div class="header-lead-text">
+              <p>Sign-up for our 30-day trial. No credit card required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header m1">
+            <div class="pageviews-text-wrapper">
+              <span class="pageviews-amount">100K</span>
+              <small class="pageviews">Pageviews</small>
+            </div>
+            <div class="amount-per-month-wrapper">
+              <span class="monthly-amount">$16.00</span>
+              <small class="per-month">/ month</small>
+            </div>
+            <div class="slider-amount-wrapper m2">
+              <input
+                type="range"
+                autocomplete="off"
+                id="slider-progress"
+                class="slider-progress"
+                min="0"
+                max="100"
+                step="25"
+              />
+              <label for="slider-progress"></label>
+            </div>
+          </div>
+          <div class="billing-options-wrapper m2">
+            <div class="monthly">
+              <small>Monthly Billing</small>
+            </div>
+            <div class="billing-input">
+              <input type="checkbox" id="billing-toggle" />
+              <label for="billing-toggle">
+                <div class="checkbox-ball"></div>
+              </label>
+            </div>
+            <div class="yearly"><small>Yearly Billing</small></div>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-footer m2">
+            <div class="cta-wrapper">
+              <div class="included-benefits">
+                <ul>
+                  <li>
+                    <img
+                      src="images/icon-check.svg"
+                      alt="check-icon"
+                    />Unlimited websites
+                  </li>
+                  <li>
+                    <img src="images/icon-check.svg" alt="check-icon" />100%
+                    data ownership
+                  </li>
+                  <li>
+                    <img src="images/icon-check.svg" alt="check-icon" />Email
+                    reports
+                  </li>
+                </ul>
+              </div>
+              <div class="cta">
+                <button class="btn">Start my trial</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8"
+            target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/02.%20interactive-pricing-component"
+            target="_blank"
+            >Matt Davis</a
+          >.
+          <div class="icon">
+            <a href="https://github.com/mattdavis06" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
