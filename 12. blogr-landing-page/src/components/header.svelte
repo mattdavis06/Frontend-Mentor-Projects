@@ -28,9 +28,9 @@
 <style>
  
  header {
-    background-image: url('/images/bg-pattern-intro-desktop.svg'),-webkit-gradient(linear, left top, right top, from(#ff8f70),color-stop(#ff7e66), color-stop(#ff6c5e), color-stop(#ff5758),  to(#ff3d54));
-    background-image: url('/images/bg-pattern-intro-desktop.svg'),-o-linear-gradient(left, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
-    background-image: url('/images/bg-pattern-intro-desktop.svg'),linear-gradient(to right, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
+    background-image: url('../../public/images/bg-pattern-intro-desktop.svg'),-webkit-gradient(linear, left top, right top, from(#ff8f70),color-stop(#ff7e66), color-stop(#ff6c5e), color-stop(#ff5758),  to(#ff3d54));
+    background-image: url('../../public/images/bg-pattern-intro-desktop.svg'),-o-linear-gradient(left, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
+    background-image: url('../../public/images/bg-pattern-intro-desktop.svg'),linear-gradient(to right, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
     background-repeat: no-repeat;
     background-size: 150%;
     background-position: 20% 55%;
@@ -84,9 +84,9 @@
   }
 @media only screen and (max-width: 900px) {
     header {
-    background-image: url('/images/bg-pattern-intro-mobile.svg'),-webkit-gradient(linear, left top, right top, from(#ff8f70),color-stop(#ff7e66), color-stop(#ff6c5e), color-stop(#ff5758),  to(#ff3d54));
-    background-image: url('/images/bg-pattern-intro-mobile.svg'),-o-linear-gradient(left, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
-    background-image: url('/images/bg-pattern-intro-mobile.svg'),linear-gradient(to right, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
+    background-image: url('../../public/images/bg-pattern-intro-mobile.svg'),-webkit-gradient(linear, left top, right top, from(#ff8f70),color-stop(#ff7e66), color-stop(#ff6c5e), color-stop(#ff5758),  to(#ff3d54));
+    background-image: url('../../public/images/bg-pattern-intro-mobile.svg'),-o-linear-gradient(left, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
+    background-image: url('../../public/images/bg-pattern-intro-mobile.svg'),linear-gradient(to right, #ff8f70,#ff7e66, #ff6c5e, #ff5758,  #ff3d54);
     background-size: 250%;
     background-position: center center;
   }

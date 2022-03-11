@@ -26,9 +26,9 @@
 <style>
 
 section {
-    background-image:  url('/images/bg-pattern-circles.svg'),-o-linear-gradient(left bottom, #2c2d3f, #313248, #353751, #3a3c5b, #3f4164);
-    background-image:  url('/images/bg-pattern-circles.svg'),-webkit-gradient(linear, left bottom, right top, from(#2c2d3f), color-stop(#313248), color-stop(#353751), color-stop(#3a3c5b), to(#3f4164));
-    background-image:  url('/images/bg-pattern-circles.svg'),linear-gradient(to right top, #2c2d3f, #313248, #353751, #3a3c5b, #3f4164);
+    background-image:  url('../../public/images/bg-pattern-circles.svg'),-o-linear-gradient(left bottom, #2c2d3f, #313248, #353751, #3a3c5b, #3f4164);
+    background-image:  url('../../public/images/bg-pattern-circles.svg'),-webkit-gradient(linear, left bottom, right top, from(#2c2d3f), color-stop(#313248), color-stop(#353751), color-stop(#3a3c5b), to(#3f4164));
+    background-image:  url('../../public/images/bg-pattern-circles.svg'),linear-gradient(to right top, #2c2d3f, #313248, #353751, #3a3c5b, #3f4164);
     background-repeat: no-repeat;
     background-position: left bottom;
     border-bottom-left-radius: 5rem;

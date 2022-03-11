@@ -14,9 +14,9 @@
       <div class="col">
         <div class="img-wrapper">
           {#if windowOver900}
-          <img src="/images/illustration-laptop-desktop.svg" alt="illustration-laptop-image">
+          <img src="../../public/images/illustration-laptop-desktop.svg" alt="illustration-laptop-image">
           {:else}
-          <img src="/images/illustration-laptop-mobile.svg" alt="illustration-laptop-image">
+          <img src="../../public/images/illustration-laptop-mobile.svg" alt="illustration-laptop-image">
           {/if}
         </div>
     </div>
