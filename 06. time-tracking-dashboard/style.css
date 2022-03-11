@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    /* Colours ---------- */
+    /* Primary */
+    --blue: hsl(246, 80%, 60%);
+    --light-red--work: hsl(15, 100%, 70%);
+    --soft-blue--play: hsl(195, 74%, 62%);
+    --light-red--study: hsl(348, 100%, 68%);
+    --lime-green--exercise: hsl(145, 58%, 55%);
+    --violet--social: hsl(264, 64%, 52%);
+    --soft-orange--self-care: hsl(43, 84%, 65%);
+    --white: #fff;
+    
+    /* Neutral */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+ /* Global Resets ---------- */
+* {
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ /* Styling ---------- */
+.container {
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-wrapper {
+    height: 55vh;
+    padding: 0.5rem 2rem;
+    display: grid;
+    gap: 2rem;
+    margin: auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'profile-card card-1 card-2 card-3'
+    'profile-card card-4 card-5 card-6';
+}
+
+ /* Grid Template Area Names ---------- */
+.grid .profile-card {
+    grid-area: profile-card;
+}
+.grid .card-1 {
+    grid-area: card-1;
+}
+.grid .card-2 {
+    grid-area: card-2;
+}
+.grid .card-3 {
+    grid-area: card-3;
+}
+.grid .card-4 {
+    grid-area: card-4;
+}
+.grid .card-5 {
+    grid-area: card-5;
+}
+.grid .card-6 {
+    grid-area: card-6;
+}
+
+/* Profile Card ---------- */
+.profile-card {
+    position: relative;
+}
+
+.profile-time-selector {
+    background: var(--dark-blue);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.profile-time-selector p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--desaturated);
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.profile-time-selector p:hover {
+    color: var(--pale-blue);
+    transition: 0.3s ease-in-out;
+}
+
+.profile-time-selector p.active {
+    color: var(--white);
+} 
+
+.profile-header {
+    background: var(--blue);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: calc(100% - 33%);
+    z-index: 10;
+    position: absolute;
+    top: 0
+}
+
+.profile-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-bottom: 2rem;
+}
+
+.profile-name p {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--pale-blue);
+    margin: 0.25rem 0;
+}
+
+.profile-name h1 {
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: 0.8px;
+    color: var(--white);
+}
+
+ /* Cards ---------- */
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card-bg-topper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.card-bg-topper svg {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+.card .card-content {
+    background: var(--dark-blue);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card .card-content:hover {
+    filter: brightness(150%);
+    transition: 0.3s ease-in-out;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.card-hours {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-hours .current-hours h3,
+.card-hours .current-hours span {
+    font-weight: 300;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.card-hours .previous-hours h4,
+.card-hours .previous-hours span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--desaturated);
+    margin-top: 0.5rem;
+}
+
+.card-1 .card-bg-topper {
+    background: var(--light-red--work);
+    border-radius: 1rem;
+}
+
+.card-2 .card-bg-topper {
+    background: var(--soft-blue--play);
+    border-radius: 1rem;
+}
+
+.card-3 .card-bg-topper {
+    background: var(--light-red--study);
+    border-radius: 1rem;
+}
+
+.card-4 .card-bg-topper {
+    background: var(--lime-green--exercise);
+    border-radius: 1rem;
+}
+
+.card-5 .card-bg-topper {
+    background: var(--violet--social);
+    border-radius: 1rem;
+}
+
+.card-6 .card-bg-topper {
+    background: var(--soft-orange--self-care);
+    border-radius: 1rem;
+}
+
+ /* Row & Attribution ---------- */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution {
+    font-size: 0.6rem;
+    font-weight: 300;
+    color: var(--white);
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.attribution a:hover {
+    filter: brightness(130%);
+}
+
+.attribution .icon {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+ /* Media Queries---------- */
+@media only screen and (max-width:1175px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width:1140px) {
+   .dashboard-wrapper {
+        height: 80vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        'profile-card card-1 card-2'
+        'profile-card card-4 card-5'
+        'card-3 card-3 card-6';
+   }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        width: 100vw;
+    }
+
+    .dashboard-wrapper {
+        height: 90vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        'profile-card card-1 card-2'
+        'profile-card card-4 card-5'
+        'card-3 card-3 card-6';
+   }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        width: 100vw;
+    }
+
+    .dashboard-wrapper {
+    height: 80vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    grid-template-areas: 
+    'profile-card card-1 card-1'
+    'profile-card card-2 card-2'
+    'card-3 card-3 card-4'
+    'card-5 card-5 card-6';
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        width: 100vw;
+    }
+
+    .dashboard-wrapper {
+    height: 90vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'profile-card card-1 card-2'
+    'profile-card card-4 card-5'
+    'card-3 card-3 card-6';
+    }
+
+}
+
+@media only screen and (max-width:862px) {
+    body {
+        height: auto;
+    }
+    .container {
+        width: 100vw;
+        padding: 2rem 1.5rem;
+    }
+    .dashboard-wrapper {
+         height: 90vh;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(4, 200px);
+         grid-template-areas: 
+         'profile-card profile-card'
+         'card-1 card-2'
+         'card-3 card-4'
+         'card-5 card-6';
+    }
+
+    .profile-card .profile-time-selector {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding: 0.6rem 1rem;
+    }
+
+    .profile-card .profile-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+ }
+
+ @media only screen and (max-width:620px) {
+    .dashboard-wrapper {
+        height: auto;
+        padding: 2rem 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 180px);
+        grid-template-areas: 
+        'profile-card'
+        'card-1'
+        'card-2'
+        'card-3' 
+        'card-4'
+        'card-5' 
+        'card-6';
+   }
+
+   .profile-card .profile-header {
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   .profile-header .profile-img img {
+       margin-bottom: 0;
+   }
+
+   .card-content .card-hours {
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+   }   
+ }
+
+ @media only screen and (max-width:520px) {
+    .profile-card .profile-header {
+        padding: 1rem;
+        justify-content: space-around;
+    }
+    .profile-header .profile-img img {
+        height: 60px;
+        width: 60px;
+    }
+    .profile-header .profile-name h1{
+        font-size: 1.5rem;
+    }
+
+    .card-hours .current-hours h3,
+    .card-hours .current-hours span {
+        font-size: 2rem;
+    }
+ }
+
+
