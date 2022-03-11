@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col">
         <div class="img-wrapper">
-          <img src="../../images/illustration-phones.svg" alt="">
+          <img src="../../public/images/illustration-phones.svg" alt="">
         </div>
       </div>
       <div class="col">
