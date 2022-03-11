@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+/* ------------------- */
+    /* Colours */
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Netrual */
+    --dark-blue--main-bg: hsl(217, 54%, 11%);
+    --dark-blue--card-bg: hsl(216, 50%, 16%);
+    --dark-blue--card-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--dark-blue--main-bg);
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    width: 90vw;
+    height: 100vh;
+}
+
+.card-wrapper {
+    width: 350px;
+    background-color: var(--dark-blue--card-bg);
+    border-radius: 0.8rem;
+    margin: 2rem 1rem;
+}
+
+.card {
+   padding: 1.4rem;
+}
+
+.card-img { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-img::before {
+    content: '';
+    position: absolute;
+    background: var(--cyan);
+    border-radius: 0.8rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    opacity: 0;
+}
+
+.card-img::after {
+    content: url(/images/icon-view.svg);
+    position: absolute;
+    border-radius: 0.8rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    display: block;
+    user-select: none;
+}
+
+.img-bg-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+}
+
+.card-img:hover.card-img::before {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-img:hover.card-img::after {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-content {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--dark-blue--card-line);
+}
+
+.card-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.card-header h1:hover {
+    color: var(--cyan);
+    transition: 0.3s ease-in-out;
+}
+
+.card-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--soft-blue);
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    margin-bottom: 1.5rem;
+}
+
+.card-data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.data-value, 
+.days-left {
+    display: flex;
+    align-items: center;
+}
+
+.data-value img,
+.days-left img {
+    margin-right: 0.5rem;
+}
+
+.data-value h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cyan)
+}
+
+.days-left h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--soft-blue);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.user img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-right: 1rem;
+}
+
+.user h4 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--soft-blue);
+    letter-spacing: 0.5px;
+}
+
+.user span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.user span:hover {
+    color: var(--cyan);
+    transition: 0.3s ease-in-out;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+.attribution a {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: var(--soft-blue);
+}
+
+.attribution a:hover {
+    color: var(--cyan);
+    transition: 0.3s ease-in-out;
+}
+
+.attribution .icon {
+    display: inline-flex;
+}
+
