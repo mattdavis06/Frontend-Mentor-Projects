@@ -4,7 +4,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ### The challenge
 
-![Design preview for the Space Tourism challenge coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Space Tourism challenge coding challenge](./desktop-preview.jpg)
 
 Users should be able to:
 
