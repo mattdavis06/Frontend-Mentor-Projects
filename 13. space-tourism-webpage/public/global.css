@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+/* Global VARs */
+:root {
+  /* Colours */
+  --black-color: rgba(11, 13, 23);
+  --light-blue-color: rgba(208, 214, 249);
+  --white-color: rgba(255, 255, 255);
+  --grey-color: rgba(255, 255, 255, 0.25);
+  --hover-color: rgba(255, 255, 255, 0.5);
+  --nav-bg-color: rgba(255, 255, 255, 0.1);
+  --nav-line-color: rgba(151, 151, 151, 0.8);
+
+  /* Fonts */
+  --primary-font: 'Bellefair', serif;
+  --secondary-font: 'Barlow Condensed', sans-serif;
+  --body-font: 'Barlow', sans-serif;
+}
+
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+  width: 100%;
+  background: var(--black-color); /* BG fallback */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  height: 75vh;
+}
+
+/* Typography Styles */
+h1 {
+  font-family: var(--primary-font);
+  font-size: 9.375rem; /* 150px */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-size: 6.25rem; /* 100px */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+h3 {
+  font-family: var(--primary-font);
+  font-size: 3.5rem; /* 56px */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+h4 {
+  font-family: var(--primary-font);
+  font-size: 2rem; /* 32px */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+h5 {
+  font-family: var(--secondary-font);
+  font-size: 1.75rem; /* 28px */
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4.75px;
+  color: var(--light-blue-color);
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.6;
+  color: var(--white-color);
+}
+
+.subheading-one p {
+  font-family: var(--primary-font);
+  font-size: 1.75rem; /* 28px */
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.subheading-two p {
+  font-family: var(--secondary-font);
+  font-size: 0.875rem; /* 14px */
+  text-transform: uppercase;
+  letter-spacing: 2.35px;
+  color: var(--white-color);
+}
+
+.nav-text {
+  font-family: var(--secondary-font);
+  font-size: 1rem; /* 16px */
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  color: var(--white-color);
+}
+
+/* Utility Classes */
+.container {
+  width: 75vw;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 1075px) {
+  main {
+    height: auto;
+  }
+
+  .container {
+    width: 85vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    overflow: scroll;
+  }
+}
