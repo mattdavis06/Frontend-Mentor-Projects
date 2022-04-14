@@ -2,7 +2,7 @@ import { createContext, useState } from 'react'
 
 const IPTrackerContext = createContext()
 
-const IP_TRACKER_URL = 'http://ipwhois.app/json/'
+const IP_TRACKER_URL = 'https://ipwhois.app/json/'
 
 export const IPTrackerProvider = ({ children }) => {
   const [result, setResult] = useState({})
