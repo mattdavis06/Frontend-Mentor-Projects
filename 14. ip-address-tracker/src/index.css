@@ -210,6 +210,7 @@ header {
   }
 
   h1 {
+    margin: 1rem;
     font-size: 1.5rem;
   }
 
@@ -220,7 +221,6 @@ header {
   .results-container {
     width: max(320px, 80vw);
     padding: 1.5rem;
-    top: 30%;
   }
 
   .results-wrapper {
@@ -229,7 +229,7 @@ header {
   }
 
   .results-wrapper > div {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .results-wrapper div:last-of-type {
