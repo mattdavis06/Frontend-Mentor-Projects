@@ -51,28 +51,20 @@ export const TodoInputProvider = ({ children }) => {
   }
 
   // State for LS
-  const [updateLS, setUpdateLS] = useLocalStorage('todos', [])
-
-  // Gets Todo in LS & Updates State
-  useEffect(() => {
-    const itemsInLS = JSON.parse(localStorage.getItem('todos'))
-
-    // Updates LS and todoItems
-    if (!itemsInLS) {
-      setUpdateLS(todoItems)
-      setTodoItems(updateLS)
-    } else {
-      setTodoItems(updateLS)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const [itemsInLS, setItemsInLS] = useLocalStorage('todos', todoItems)
 
   // Stores Todo Items in LS
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todoItems))
-    // Updates Todo ID
+    setItemsInLS(todoItems)
     setTodoId(todoItems.length + 1)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todoItems])
+
+  // Gets Todo in LS & Updates State
+  useEffect(() => {
+    setTodoItems(itemsInLS)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // -------------------------------
   // To Do Clicks
