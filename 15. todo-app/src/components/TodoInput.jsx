@@ -23,7 +23,7 @@ function TodoInput() {
         completed: false,
       }
       setTodoId(todoId + 1)
-      setTodoItems([...todoItems, newTodo])
+      setTodoItems([newTodo, ...todoItems])
     }
     setTodoText('')
   }
@@ -33,6 +33,7 @@ function TodoInput() {
       <div className="check-outer-circle"></div>
       <label htmlFor="todo"></label>
       <input
+        enterkeyhint="done"
         type="text"
         name="todo"
         value={todoText}
