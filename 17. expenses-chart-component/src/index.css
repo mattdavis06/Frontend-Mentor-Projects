@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+  /* ----- Colors ----- */
+  /* Primary */
+  --primary-red: hsl(10, 79%, 65%);
+  --primary-cyan: hsl(186, 34%, 60%);
+
+  /* Neutrals */
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* ----- Resets ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* ----- Body Styles ----- */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ----- Global Styles ----- */
+.container {
+  height: 100%;
+  width: clamp(90vw, 50vw, 20vw);
+  max-width: 600px;
+  margin: 9rem auto;
+}
+
+/* ----- Balance El ----- */
+.balance-wrapper {
+  background-color: var(--primary-red);
+  color: var(--very-pale-orange);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-balance-text {
+  margin-bottom: 0.5rem;
+}
+
+.my-balance-text h1 {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.my-balance span {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+/* ----- Chart El ----- */
+.chart-outer-wrapper {
+  background-color: var(--very-pale-orange);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  color: var(--dark-brown);
+}
+
+.chart-heading {
+  margin-bottom: 1.5rem;
+}
+
+.chart-heading h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 3.5rem 0 1.5rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--cream);
+}
+
+.chart-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 12.5rem;
+  position: relative;
+}
+
+.chart-el .day {
+  background-color: var(--primary-red);
+  max-height: 15rem;
+  width: 2.85rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.chart-el:nth-of-type(3) .day {
+  background-color: var(--primary-cyan);
+}
+
+.chart-el .day:hover,
+.chart-el:nth-of-type(3) .day:hover {
+  filter: opacity(0.6);
+  transition: 0.2s all ease-in-out;
+}
+
+.chart-el-tooltip {
+  position: absolute;
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.chart-el-tooltip.hover {
+  opacity: 1;
+}
+
+.chart-el-tooltip span {
+  font-weight: 700;
+}
+
+.chart-el small {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--medium-brown);
+}
+
+/* ----- Total Summary ----- */
+.total-summary-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.total-text {
+  margin-bottom: 0.25rem;
+}
+
+.total-text h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--medium-brown);
+}
+
+.total span {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.total-last-month {
+  padding-bottom: 0.25rem;
+}
+
+.total-last-month p {
+  text-align: end;
+  font-weight: 700;
+}
+
+.total-last-month small {
+  color: var(--medium-brown);
+}
+
+/* ----- Media Queries/Breaks ----- */
+@media screen and (max-width: 500px) {
+  .container {
+    margin: 5rem auto;
+  }
+
+  .chart-outer-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .chart-heading h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .chart-el .day {
+    width: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: clamp(95vw, 50vw, 20vw);
+  }
+}
