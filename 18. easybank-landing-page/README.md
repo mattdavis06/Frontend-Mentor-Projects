@@ -25,6 +25,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - React
+- Bootstrap 5
 
 ## Author
 
