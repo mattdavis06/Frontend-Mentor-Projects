@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+// Bootstrap Default Overrides
+$font-family-sans-serif: 'Public Sans', sans-serif;
+$body-bg: #fafafa;
+
+:root {
+  /* ----- Colors ----- */
+  /* Primary */
+  --primary-blue: hsl(233, 26%, 24%);
+  --primary-green: hsl(136, 65%, 51%);
+  --primary-cyan: hsl(192, 70%, 51%);
+  --primary-grad: linear-gradient(
+    90deg,
+    var(--primary-green) 0%,
+    var(--primary-cyan) 100%
+  );
+
+  /* Neutral */
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-grey: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ----- Global Resets & Styles ----- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  background-color: $body-bg;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: var(--white);
+}
+
+a {
+  font-size: 0.85rem;
+  letter-spacing: -0.2px;
+}
+
+button.btn-custom {
+  background: var(--primary-grad);
+  color: var(--white);
+  border-width: 0;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  padding: 0.75rem 2.45rem;
+  border-radius: 2rem;
+}
+
+button.navbar-toggler {
+  border: 0;
+  border-radius: 0;
+}
+
+button.btn-custom:hover {
+  filter: brightness(115%);
+  transition: 0.15s ease-in-out;
+}
+
+button.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ----- Custom Styles ----- */
+/* ----- Header ----- */
+// Nav
+nav {
+  z-index: 20;
+}
+a.nav-link {
+  position: relative;
+  color: var(--grayish-blue);
+}
+
+a.nav-link::before {
+  content: '';
+  position: absolute;
+  background-color: var(--primary-green);
+  height: 4px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.7rem;
+  transition: 0.15s ease-in-out;
+  opacity: 0;
+}
+
+a.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+a.nav-link:hover::before {
+  opacity: 1;
+}
+
+.navbar-icon svg {
+  transform: scale(1.2);
+}
+
+.navbar-mobile {
+  top: -50vh;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90vw;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.navbar-mobile.open {
+  top: 10vh;
+}
+
+.navbar-mobile ul li a {
+  color: var(--primary-blue);
+}
+
+.navbar-mobile ul li a:hover {
+  color: var(--primary-green);
+  transition: 0.15s ease-in-out;
+}
+
+.navbar-mobile ul li a:hover::before {
+  opacity: 0;
+}
+
+// Hero Section
+.hero-wrapper {
+  background: url('./assets/images/bg-intro-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: -27.5vh;
+  background-position-x: 40vw;
+  width: 100%;
+}
+
+.hero-wrapper .row {
+}
+
+.hero-title h1 {
+  color: var(--primary-blue);
+  font-size: 2.75rem;
+}
+
+.hero-text {
+  margin: 1.5rem 10rem 2rem 0;
+}
+
+.hero-text p {
+  color: var(--grayish-blue);
+}
+
+.hero-bg-img {
+  height: 70vh;
+}
+
+.hero-bg-img img {
+  top: -12.5vh;
+  right: -18vw;
+}
+
+/* ----- Why EasyBank ----- */
+.why-easybank {
+  background-color: var(--light-grayish-blue);
+  padding: 5rem 0;
+}
+
+.why-easybank-wrapper {
+  margin-bottom: 4rem;
+}
+
+.why-easybank-wrapper h2 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
+
+.why-easybank-wrapper p {
+  font-size: 0.95rem;
+  color: var(--grayish-blue);
+}
+
+.why-easybank-wrapper br {
+  display: block;
+}
+
+.why-easybank .card {
+  background-color: inherit;
+  border: none;
+  min-height: 300px;
+}
+
+.card-icon {
+  margin-bottom: 1.5rem;
+}
+
+.card-subtitle small {
+  font-size: 0.65rem;
+  color: var(--grayish-blue);
+}
+
+.card-title h4 {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.card-text p {
+  font-size: 0.85rem;
+  color: var(--grayish-blue);
+}
+
+/* ----- Latest Articles ----- */
+.latest-articles {
+  padding: 5rem 0 2rem 0;
+}
+
+.latest-articles-wrapper {
+  margin-bottom: 3rem;
+}
+
+.latest-articles-wrapper h3 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.latest-articles .card {
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.latest-articles .card-body {
+  border-radius: 0.5rem;
+  padding: 2rem 1.25rem;
+}
+
+.latest-articles .card-title h4 {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  padding-right: 2rem;
+}
+
+.latest-articles .card-text p {
+  font-size: 0.7rem;
+  padding-right: 1.5rem;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: var(--primary-blue);
+}
+
+.social-media-icons a {
+  text-decoration: none;
+}
+
+.social-media-icons a:hover svg path {
+  fill: var(--primary-green);
+  transition: 0.15s ease-in-out;
+}
+
+.footer-nav a {
+  color: var(--light-grayish-blue);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--primary-green);
+  transition: 0.15s ease-in-out;
+}
+
+.footer-nav-cta p {
+  color: var(--grayish-blue);
+}
+
+.attribution small {
+  color: var(--grayish-blue);
+  font-size: 0.75rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.75rem;
+}
+
+.attribution a:hover {
+  color: var(--primary-green);
+  transition: 0.15s ease-in-out;
+}
+
+@media only screen and (max-width: 1199px) {
+  .hero-bg-img img {
+    top: -10.5vh;
+    right: -25vw;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-wrapper .col-md-12:first-of-type {
+    order: 2;
+    text-align: center;
+    margin-top: 10rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-wrapper .col-md-12:last-of-type {
+    order: 1;
+    text-align: center;
+  }
+
+  .hero-bg-img {
+    height: auto;
+    margin-top: -5rem;
+  }
+
+  .hero-bg-img img {
+    position: unset !important;
+    top: unset;
+    right: unset;
+    height: auto;
+    width: 75%;
+    object-fit: cover;
+    margin-top: -20rem;
+  }
+
+  .hero-text {
+    margin: 0 5rem;
+  }
+
+  .why-easybank {
+    text-align: center;
+  }
+
+  .latest-articles-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-wrapper {
+    background-position-y: -30vh;
+    background-position-x: 10vw;
+  }
+  .hero-wrapper .col-md-12:first-of-type {
+    margin-top: 7rem;
+  }
+
+  .hero-bg-img {
+    height: auto;
+    margin-top: 10rem;
+  }
+
+  .hero-bg-img img {
+    width: 80%;
+  }
+
+  .hero-text {
+    text-align: justify;
+  }
+
+  .why-easybank-wrapper p {
+    text-align: center;
+    padding: 0 1.25rem;
+  }
+
+  .why-easybank-wrapper br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-wrapper {
+    background: url('./assets/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-wrapper .col-md-12:first-of-type {
+    margin-top: 10rem;
+  }
+
+  .hero-bg-img img {
+    width: 100%;
+    margin-top: -15rem;
+  }
+
+  .hero-text {
+    margin: 2rem;
+  }
+}
