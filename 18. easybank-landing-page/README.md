@@ -16,7 +16,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [18. easybank-landing-page](https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/18.%20easybank-landing-page)
-- Live Site URL: [//18-easybank-landing-page.netlify.app/](https://18-easybank-landing-paget.netlify.app/)
+- Live Site URL: [//18-easybank-landing-page.netlify.app/](https://18-easybank-landing-page.netlify.app/)
 
 ### Built with
 
