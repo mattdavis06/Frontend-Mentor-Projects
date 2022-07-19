@@ -1,22 +1,24 @@
-import { useState } from "react";
-import { ReactComponent as Logo } from "../assets/images/logo-bookmark.svg";
-import { ReactComponent as LogoMobileMenu } from "../assets/images/logo-bookmark-mobile-menu.svg";
-import { ReactComponent as Hamburger } from "../assets/images/icon-hamburger.svg";
-import { ReactComponent as Close } from "../assets/images/icon-close.svg";
-import { ReactComponent as FbIcon } from "../assets/images/icon-facebook.svg";
-import { ReactComponent as TwitterIcon } from "../assets/images/icon-twitter.svg";
-import ButtonSm from "./shared/ButtonSm";
+import { useState } from 'react'
+import { ReactComponent as Logo } from '../assets/images/logo-bookmark.svg'
+
+import { ReactComponent as Hamburger } from '../assets/images/icon-hamburger.svg'
+import { ReactComponent as Close } from '../assets/images/icon-close.svg'
+
+import ButtonSm from './shared/ButtonSm'
+import NavMobileMenu from './NavMobileMenu'
 
 export default function Nav() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false)
 
 	const handleClick = () => {
 		if (!isOpen) {
-			setIsOpen(true);
+			document.body.style.overflow = 'hidden'
+			setIsOpen(true)
 		} else {
-			setIsOpen(false);
+			document.body.style.overflow = 'auto'
+			setIsOpen(false)
 		}
-	};
+	}
 	return (
 		<nav className='navbar navbar-expand-lg navbar-light py-4'>
 			<div className='container-lg'>
@@ -52,58 +54,12 @@ export default function Nav() {
 				</div>
 				<div
 					className={`${
-						isOpen ? "open" : ""
+						isOpen ? 'open' : ''
 					} navbar-mobile-wrapper position-absolute d-flex flex-column`}
 				>
-					<div className='navbar-mobile d-flex justify-content-between'>
-						<a href='#/' className='navbar-brand'>
-							<LogoMobileMenu />
-						</a>
-						<button className='navbar-toggler' onClick={handleClick}>
-							<div className='navbar-icon'>
-								<Close />
-							</div>
-						</button>
-					</div>
-					<div className='navbar-mobile-items mb-auto'>
-						<ul className='navbar-nav d-flex align-items-center'>
-							<li className='nav-item-mobile py-4 w-100 text-center'>
-								<a className='nav-link-mobile' href='#/'>
-									Features
-								</a>
-							</li>
-							<li className='nav-item-mobile py-4 w-100 text-center'>
-								<a className='nav-link-mobile' href='#/'>
-									Pricing
-								</a>
-							</li>
-							<li className='nav-item-mobile py-4 w-100 text-center'>
-								<a className='nav-link-mobile' href='#/'>
-									Contact
-								</a>
-							</li>
-							<li className='nav-item-mobile py-4 w-100'>
-								<ButtonSm
-									bootstrap_class='btn-white-outline w-100 h-25'
-									text='Login'
-								/>
-							</li>
-						</ul>
-					</div>
-					<div className='navbar-social-icons d-flex align-items-center justify-content-center m-5'>
-						<div className='icon fb mx-4'>
-							<a href='#/'>
-								<FbIcon />
-							</a>
-						</div>
-						<div className='icon twitter mx-4'>
-							<a href='#/'>
-								<TwitterIcon />
-							</a>
-						</div>
-					</div>
+					<NavMobileMenu handleClick={handleClick} />
 				</div>
 			</div>
 		</nav>
-	);
+	)
 }
