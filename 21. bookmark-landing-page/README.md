@@ -27,6 +27,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - [React](https://reactjs.org/) - JS library
+- Bootstrap 5
 - Mobile-first workflow
 
 ## Author
