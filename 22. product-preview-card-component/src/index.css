@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* ----- Custom Variables ----- */
+:root {
+    /* FONTS ----- */
+    --title-font: 'Fraunces', serif;
+    --body-font: 'Montserrat', sans-serif;
+    --reg: 500;
+    --bold: 700; 
+
+    /* COLOURS ----- */
+    /* Primary */
+    --primary-cyan: hsl(158, 36%, 37%);
+    --primary-cyan-hover: hsl(158, 37%, 31%);
+    --primary-cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-cream);
+    font-family: var(--body-font);
+}
+
+/* ----- Syling Resets ----- */
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    text-align: inherit;
+    outline: none;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
+/* ----- Global Syling ----- */
+.col {
+    flex: 50%;
+}
+
+/* CARD */
+.card-wrapper {
+    display: flex;
+    border-radius: 1rem;
+    background-color: var(--white);
+    width: 40rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.card-content {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.product-type p {
+    font-size: 1rem;
+    font-weight: var(--reg);
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 4px;
+}
+
+.product-title h1 {
+    font-family: var(--title-font);
+    font-size: 2.25rem;
+    color: var(--very-dark-blue);
+    line-height: 1.05;
+}
+
+.product-description p {
+    font-size: 1rem;
+    font-weight: var(--reg);
+    color: var(--dark-grayish-blue);
+    line-height: 1.5;
+}
+
+.product-price-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.product-price {
+    padding-right: 2rem;
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: var(--primary-cyan);
+}
+
+.product-rrp {
+    padding: 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: var(--reg);
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+} 
+
+.btn {
+    background-color: var(--primary-cyan);
+    width: 100%;
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: var(--bold);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-cyan-hover);
+    transition: 0.3s ease-in-out;
+}
+
+.btn svg {
+    margin-right: 0.75rem;
+}
+
+/* ATTRIBUTION */
+.attribution {
+    text-align: center;
+    margin-top: 1rem;
+}
+.attribution small {
+    color: var(--very-dark-blue);
+    font-size: 0.75rem;
+  }
+  
+  .attribution a {
+    text-decoration: none;
+    color: var(--primary-cyan);
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+  }
+  
+  .attribution a:hover {
+    color: var(--primary-cyan-hover);
+    transition: 0.15s ease-in-out;
+  }
+  
+
+@media only screen and (max-width: 580px) {
+    .card-wrapper {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .card-img img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .card-content {
+        height: 25rem;
+    }
+
+    .product-title {
+        width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .product-title {
+        width: 100%;
+    }
+  } 
