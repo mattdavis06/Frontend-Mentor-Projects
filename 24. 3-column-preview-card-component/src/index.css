@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	/* ----- FONTS ----- */
+	--body-font: 'Lexend Deca', sans-serif;
+	--heading-font: 'Big Shoulders Display', cursive;
+
+	/* ----- COLOURS ------ */
+	/* --- Primary */
+	--orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--dark-green: hsl(179, 100%, 13%);
+
+	/* --- Neutral */
+	--white: hsla(0, 0%, 100%, 0.75); /* Paragraph Text */
+	--v-light-grey: hsl(0, 0%, 95%); /* BG, Headings & Btns */
+}
+
+/* GLOBAL RESETS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+body {
+	font-family: var(--body-font);
+	background-color: var(--white);
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+/* GLOBAL STYLING */
+.container {
+	width: 95vw;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	flex: 1 0 0%;
+}
+
+/* CUSTOM STYLING */
+.card-wrapper {
+	height: 100%;
+	display: grid;
+	place-content: center;
+}
+
+.card {
+	padding: 3rem;
+	min-height: 520px;
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.card-header-icon {
+	margin-bottom: auto;
+}
+
+.card-heading h1 {
+	font-family: var(--heading-font);
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	color: var(--v-light-grey);
+}
+
+.card-body {
+	margin: 2rem 0;
+}
+
+.card-body p {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: var(--white);
+	padding-right: 1.2rem;
+}
+
+.card-cta {
+	margin-top: auto;
+}
+
+.btn {
+	background-color: var(--v-light-grey);
+	padding: 1rem 2rem;
+	border-radius: 4.5rem;
+	border: 2px solid var(--v-light-grey);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+	background-color: transparent;
+}
+
+.btn:hover a {
+	color: var(--v-light-grey);
+}
+
+.btn-1 a {
+	color: var(--orange);
+}
+
+.btn-2 a {
+	color: var(--dark-cyan);
+}
+
+.btn-3 a {
+	color: var(--dark-green);
+}
+
+.card-1 {
+	background-color: var(--orange);
+	border-top-left-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
+}
+
+.card-2 {
+	background-color: var(--dark-cyan);
+}
+
+.card-3 {
+	background-color: var(--dark-green);
+	border-top-right-radius: 0.75rem;
+	border-bottom-right-radius: 0.75rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 90vw;
+		height: auto;
+	}
+
+	.card-wrapper {
+		padding: 5rem 0;
+	}
+
+	.row {
+		flex-direction: column;
+	}
+
+	.card {
+		min-height: 490px;
+		max-width: unset;
+		min-width: 340px;
+	}
+
+	.card-1 {
+		border-top-left-radius: 0.75rem;
+		border-top-right-radius: 0.75rem;
+		border-bottom-left-radius: 0;
+	}
+
+	.card-3 {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0.75rem;
+		border-bottom-left-radius: 0.75rem;
+	}
+}
