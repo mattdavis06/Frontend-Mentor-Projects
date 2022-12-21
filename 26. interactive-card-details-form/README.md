@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [26. Interactive card details form](https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/26.%20interactive%20card%20details%20form)
+- Solution URL: [26. Interactive card details form](https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/26.%20interactive-card-details-form)
 - Live Site URL: [//26-interactive-card-details-form.netlify.app/](https://26-interactive-card-details-form.netlify.app/)
 
 ### Built with
