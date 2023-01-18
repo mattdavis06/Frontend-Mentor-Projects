@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [27. Multi-step form](https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/27.%20multi-step-form-solution)
-- Live Site URL: [//27-multi-step-form-solution.netlify.app/](https://27-multi-step-form-solution.netlify.app/)
+- Solution URL: [27. Multi-step form](https://github.com/mattdavis06/Frontend-Mentor-Projects/tree/main/27.%20multi-step-form)
+- Live Site URL: [//27-multi-step-form.netlify.app/](https://27-multi-step-form.netlify.app/)
 
 ### Built with
 
