@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="tailwind.css" />
+		<title>Chat App CSS</title>
+	</head>
+	<body class="overflow-x-hidden bg-white">
+		<section
+			id="background"
+			class="relative h-screen w-screen overflow-x-hidden"
+		>
+			<div
+				class="bg-element-left xl:2/6 absolute top-0 -left-2/4 h-[60%] w-full rounded-bl-full rounded-br-full bg-gradient-to-b from-lightMagenta to-lightViolet sm:h-3/4 lg:-left-20 lg:w-2/5 xl:-left-44"
+			></div>
+			<div
+				class="bg-element-right xl:2/6 to-transparent absolute bottom-0 -right-2/4 h-[60%] w-full rounded-tl-full rounded-tr-full bg-gradient-to-b from-appBg sm:h-3/4 md:bg-appBg lg:-right-20 lg:w-2/5 xl:-right-44"
+			></div>
+		</section>
+		<section
+			id="content"
+			class="absolute top-0 left-0 grid h-full w-full place-items-center"
+		>
+			<main
+				class="flex h-auto w-full max-w-screen-xl flex-col items-center justify-center sm:w-11/12 md:h-4/5 md:w-4/5 md:flex-row lg:w-5/6 lg:justify-between lg:px-24 xl:w-8/12"
+			>
+				<!-- Phone Template -->
+				<div
+					class="phone-template relative mx-auto my-16 h-[540px] w-[280px] animate-bounce rounded-3xl bg-white p-2.5 shadow-2xl transition hover:-translate-y-4 lg:my-0 lg:mx-0"
+				>
+					<!-- Phone Top Notch -->
+					<div
+						class="phone-top-notch absolute top-0 left-2/4 z-10 h-[27px] w-[130px] -translate-x-2/4 rounded-xl bg-white"
+					></div>
+					<!-- Phone Inner -->
+					<div
+						class="phone-inner-bg relative h-full w-full rounded-2xl bg-appBg"
+					>
+						<!-- App Header -->
+						<div
+							class="app-header absolute h-[60px] w-full rounded-tl-2xl rounded-bl-md rounded-br-md rounded-tr-2xl bg-gradient-to-l from-lightMagenta to-lightViolet"
+						>
+							<!-- App Inner Header -->
+							<div
+								class="app-inner-header absolute left-0 bottom-2 h-[30px] w-full overflow-hidden px-3"
+							>
+								<div
+									class="app-inner-header-content flex h-full w-full items-center justify-between"
+								>
+									<div class="app-inner-header-user-info flex items-center">
+										<div
+											class="app-header-back-icon cursor-pointer text-white/70"
+										>
+											<i class="fa-solid fa-chevron-left"></i>
+										</div>
+										<div class="app-header-avatar mx-2">
+											<img
+												src="../images/avatar.jpg"
+												class="h-7 w-7 rounded-full border border-white object-cover"
+												alt="app-avatar"
+											/>
+										</div>
+										<div class="app-header-user flex flex-col">
+											<p
+												class="cursor-pointer text-[12px] font-bold tracking-wide text-white"
+											>
+												Samuel Green
+											</p>
+											<small class="text-[8px] tracking-wider text-white/40"
+												>Available To Walk</small
+											>
+										</div>
+									</div>
+									<div class="app-inner-options-icon cursor-pointer text-white">
+										<i class="fa-solid fa-ellipsis-vertical"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- App Chat Body -->
+						<div
+							class="app-inner-chat-area flex h-full w-full flex-col justify-between px-3 pt-[70px] pb-[55px]"
+						>
+							<div
+								class="chat-section-left w-[64%] rounded-lg bg-chatLeft/10 py-1 px-2"
+							>
+								<p class="text-[10px] text-chatLeft">
+									That sounds great. I'd be happy with that.
+								</p>
+							</div>
+							<div
+								class="chat-section-left w-[64%] rounded-lg bg-chatLeft/10 py-1 px-2"
+							>
+								<p class="text-[10px] text-chatLeft">
+									Could you send over some pictures of your dog please?
+								</p>
+							</div>
+							<div class="chat-section-right-imgs flex justify-end">
+								<div class="img-wrapper flex w-[64%] justify-between px-1.5">
+									<img
+										src="../images/dog-image-1.jpg"
+										alt="chat-img-1"
+										class="h-[40px] w-[40px] rounded-lg object-cover"
+									/>
+									<img
+										src="../images/dog-image-2.jpg"
+										alt="chat-img-1"
+										class="h-[40px] w-[40px] rounded-lg object-cover"
+									/>
+									<img
+										src="../images/dog-image-3.jpg"
+										alt="chat-img-1"
+										class="h-[40px] w-[40px] rounded-lg object-cover"
+									/>
+								</div>
+							</div>
+							<div class="chat-section-right flex justify-end">
+								<div
+									class="img-wrapper flex w-[64%] justify-between rounded-lg bg-white px-2 py-1 shadow-lg"
+								>
+									<p class="text-[10px] text-chatRight">
+										Here are a few pictures. She's a happy girl!
+									</p>
+								</div>
+							</div>
+							<div class="chat-section-right flex justify-end">
+								<div
+									class="img-wrapper flex w-[64%] justify-between rounded-lg bg-white px-2 py-1 shadow-lg"
+								>
+									<p class="text-[10px] text-chatRight">Can you make it?</p>
+								</div>
+							</div>
+							<div
+								class="chat-section-left w-[64%] rounded-lg bg-chatLeft/10 py-1 px-2"
+							>
+								<p class="text-[10px] text-chatLeft">
+									She looks so happy! The time we disscussed works. How long
+									shall I take her out for?
+								</p>
+							</div>
+							<div
+								class="chat-section-option flex w-[75%] items-center rounded-lg bg-gradient-to-r from-lightMagenta to-lightViolet py-2 px-2"
+							>
+								<input
+									type="radio"
+									name="30min walk option"
+									class="mr-2.5 h-[15px] w-[15px] cursor-pointer appearance-none rounded-full border border-radioBtnOutline checked:border-appBg checked:bg-radioBtnOutline"
+								/>
+								<p class="mr-auto text-[10px] text-appBg/70">30 minute walk</p>
+								<p class="text-[15px] font-bold text-white">$29</p>
+							</div>
+							<div
+								class="chat-section-option flex w-[75%] items-center rounded-lg bg-gradient-to-r from-lightMagenta to-lightViolet py-2 px-2"
+							>
+								<input
+									type="radio"
+									name="30min walk option"
+									class="mr-2.5 h-[15px] w-[15px] cursor-pointer appearance-none rounded-full border border-radioBtnOutline checked:border-appBg checked:bg-radioBtnOutline"
+								/>
+								<p class="mr-auto text-[10px] text-appBg/70">1 hour walk</p>
+								<p class="text-[15px] font-bold text-white">$49</p>
+							</div>
+						</div>
+						<!-- App Footer/Text Box -->
+						<div
+							class="app-footer-text-box absolute bottom-[10px] left-2/4 flex h-[30px] w-[92%] -translate-x-2/4 items-center justify-between rounded-2xl bg-white pl-5 pr-2"
+						>
+							<p class="text-[10px] text-placholder">Type a message...</p>
+							<div
+								class="app-text-box-icon flex h-[23px] w-[23px] cursor-pointer items-center justify-center rounded-full bg-mainHeading"
+							>
+								<i class="fa-solid fa-chevron-right text-xs text-white"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Page Content Headers -->
+				<div class="chat-app-title-content w-11/12 md:w-[53%]">
+					<h1
+						class="mb-10 text-center text-4xl font-semibold tracking-wide text-mainHeading md:mb-5 md:text-start"
+					>
+						Simple booking
+					</h1>
+					<p
+						class="mb-10 text-center leading-8 text-paragraph md:text-start lg:leading-7"
+					>
+						Stay in touch with our dog walkers through the chat interface. This
+						makes it easy to discuss arrangements and make bookings. Once the
+						walk has been completed you can rate your walker and book again all
+						through the chat.
+					</p>
+				</div>
+			</main>
+		</section>
+	</body>
+</html>
