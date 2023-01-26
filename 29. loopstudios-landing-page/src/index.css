@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+@layer components {
+	.btn {
+		@apply flex h-[45px] w-[168px] cursor-pointer items-center justify-center border-2 font-secondaryFont text-base uppercase tracking-wider transition;
+	}
+
+	.btn-primary {
+		@apply border-black hover:bg-black hover:text-white;
+	}
+}
