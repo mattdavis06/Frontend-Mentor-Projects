@@ -1,16 +1,14 @@
-# 09 - Frontend Mentor - Job Listings w/filtering
+# 09 - Frontend Mentor - Job Listings with Filtering
 
-This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### The challenge
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
-
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
+- View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+- Filter job listings based on the categories
 
 ### Screenshot of my solution
 
@@ -24,11 +22,12 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - Superset of JavaScript
+- [ViteJS](https://vitejs.dev/) - Next Generation Frontend Tooling
 - Mobile-first workflow
-- Vanilla JavaScript
-- Font Awesome
 
 ## Author
 
